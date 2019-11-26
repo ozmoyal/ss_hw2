@@ -99,6 +99,11 @@ void withdraw(){
         printf("account does not exist\n");
         return;
     }
+    if(accounts[(accNum-ID)][C0] == 0)
+    {
+        printf("this account is closed\n");
+        return;
+    }
     printf("amount to withdraw:\n");
     if(!scanf("%lf",&amount))
     {
